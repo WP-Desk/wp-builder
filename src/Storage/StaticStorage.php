@@ -4,6 +4,11 @@ namespace WPDesk\PluginBuilder\Storage;
 
 use WPDesk\PluginBuilder\Plugin\AbstractPlugin;
 
+/**
+ * Can store plugin instances in static variable
+ *
+ * @package WPDesk\PluginBuilder\Storage
+ */
 class StaticStorage implements PluginStorage {
 	protected static $instances = [];
 
@@ -26,9 +31,8 @@ class StaticStorage implements PluginStorage {
 	public function get_from_storage( $class ) {
 		if ( isset( self::$instances[ $class ] ) ) {
 			return self::$instances[ $class ];
-		} else {
-			throw new Exception\ClassNotExists( "Class {$class} not exists in storage" );
 		}
+        throw new Exception\ClassNotExists( "Class {$class} not exists in storage" );
 	}
 }
 

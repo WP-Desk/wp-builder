@@ -2,6 +2,11 @@
 
 namespace WPDesk\PluginBuilder\Plugin;
 
+/**
+ * @deprecated Use wpdesk/wp-view
+ *
+ * @package WPDesk\PluginBuilder\Plugin
+ */
 trait TemplateLoad {
 
 	/**

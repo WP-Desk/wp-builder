@@ -2,6 +2,9 @@
 
 namespace WPDesk\PluginBuilder\Plugin;
 
+/**
+ * @package WPDesk\PluginBuilder\Plugin
+ */
 trait PluginAccess {
 	/**
 	 * Plugin.

@@ -5,6 +5,11 @@ namespace WPDesk\PluginBuilder\Builder;
 use WPDesk\PluginBuilder\Plugin\AbstractPlugin;
 use WPDesk\PluginBuilder\Storage\PluginStorage;
 
+/**
+ * @deprecated Should not be used as some old plugins are using it and we can't touch this.
+ *
+ * @package WPDesk\PluginBuilder\Builder
+ */
 class InfoBuilder extends AbstractBuilder {
 	const FILTER_PLUGIN_CLASS = 'wp_builder_plugin_class';
 	const HOOK_BEFORE_PLUGIN_INIT = 'wp_builder_before_plugin_init';
