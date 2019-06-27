@@ -2,7 +2,11 @@
 
 namespace WPDesk\PluginBuilder\Plugin;
 
-
+/**
+ * @deprecated nobody uses it :) And also this library is not a place for this class
+ *
+ * @package WPDesk\PluginBuilder\Plugin
+ */
 class ActivationTracker {
 
 	/**
