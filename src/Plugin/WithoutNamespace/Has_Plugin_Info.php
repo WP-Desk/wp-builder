@@ -1,7 +1,7 @@
 <?php
 
 if ( ! interface_exists( 'WPDesk_Translatable' ) ) {
-	require_once __DIR__ . '/../Translatable.php';
+	require_once __DIR__ . '/Translatable.php';
 }
 
 

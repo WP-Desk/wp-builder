@@ -1,3 +1,8 @@
+## [1.3.2] - 2019-09-18
+### Fixed
+- Forgotten classes
+- Fixed require_once
+
 ## [1.3.0] - 2019-09-18
 ### Added
 - Plugin classes from wp-requirements
