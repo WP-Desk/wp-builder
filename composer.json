@@ -19,7 +19,8 @@
         "wimg/php-compatibility": "^8"
     },
     "autoload": {
-		"psr-4": {"WPDesk\\PluginBuilder\\": "src/"}
+		"psr-4": {"WPDesk\\PluginBuilder\\": "src/"},
+		"classmap": ["src/Plugin/WithoutNamespace"]
     },
     "autoload-dev": {
     },
