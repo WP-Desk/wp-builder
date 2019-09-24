@@ -31,6 +31,13 @@ abstract class AbstractPlugin implements \WPDesk_Translable {
 	protected $settings_url;
 
 	/**
+	 * Support URL.
+	 *
+	 * @var string
+	 */
+	protected $support_url;
+
+	/**
 	 * AbstractPlugin constructor.
 	 *
 	 * @param \WPDesk_Plugin_Info $plugin_info
@@ -129,6 +136,10 @@ abstract class AbstractPlugin implements \WPDesk_Translable {
 	 */
 	public function links_filter( $links ) {
 		$support_link = get_locale() === 'pl_PL' ? 'https://www.wpdesk.pl/support/' : 'https://www.wpdesk.net/support';
+
+		if( $this->support_url ) {
+			$support_link = $this->support_url;
+		}
 
 		$plugin_links = [
 			'<a href="' . $support_link . '">' . __( 'Support', $this->get_text_domain() ) . '</a>',
