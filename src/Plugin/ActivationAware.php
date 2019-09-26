@@ -3,7 +3,7 @@
 namespace WPDesk\PluginBuilder\Plugin;
 
 /**
- * It means that this class is should know about subscription activation
+ * It means that this class is should know about SUBSCRIPTION activation
  *
  * @package WPDesk\PluginBuilder\Plugin
  */

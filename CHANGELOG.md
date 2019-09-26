@@ -1,3 +1,15 @@
+## [1.4.0] - 2019-09-26
+### Added
+- SlimPlugin - abstract class with only most important plugin elements
+- AbstractPlugin - docs and cleaning
+- Activateable - interface to tag plugin to hook into activation hook
+- Deactivateable - interface to tag plugin to hook into deactivation hook
+- Conditional - interface to tag classes that should be instantiated/hooked only in given state
+### Changed
+- WordpressFilterStorage - store plugin using WordPress filter system
+### Fixed
+- Fixed assets and plugin url issues
+
 ## [1.3.4] - 2019-09-26
 ### Fixed
 - Gitlab.ci

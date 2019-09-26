@@ -45,7 +45,13 @@ trait HookableParent {
 	protected function hooks_on_hookable_objects() {
 		/** @var Hookable $hookable_object $hookable_object */
 		foreach ( $this->hookable_objects as $hookable_object ) {
-			$hookable_object->hooks();
+			if ($hookable_object instanceof Conditional) {
+				if ($hookable_object::is_needed()) {
+					$hookable_object->hooks();
+				}
+			} else {
+				$hookable_object->hooks();
+			}
 		}
 	}
 

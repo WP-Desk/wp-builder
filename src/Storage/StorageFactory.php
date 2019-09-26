@@ -8,7 +8,7 @@ class StorageFactory {
 	 * @return PluginStorage
 	 */
 	public function create_storage() {
-		return new StaticStorage();
+		return new WordpressFilterStorage();
 	}
 }
 
