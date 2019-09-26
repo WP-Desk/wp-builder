@@ -1,6 +1,8 @@
-DISABLE_CODECEPTION: 1
-DISABLE_INTEGRATION_TESTS: 1
-DISABLE_PHP_5_5: 1
-IS_LIBRARY: 1
+variables:
+  DISABLE_ACCEPTANCE: "1"
+  DISABLE_FUNCTIONAL: "1"
+  IS_LIBRARY: 1
+  DISABLE_PHP_5_5: 1
+  DISABLE_CODECEPTION: 1
 
 include: 'https://gitlab.com/wpdesk/gitlab-ci/raw/master/gitlab-ci-1.2.yml'
