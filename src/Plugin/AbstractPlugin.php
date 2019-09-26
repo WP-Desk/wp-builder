@@ -198,20 +198,20 @@ abstract class AbstractPlugin extends SlimPlugin {
 		}
 
 		$plugin_links = [
-			'<a href="' . $support_link . '">' . __( 'Support', $this->get_text_domain() ) . '</a>',
+			'<a target="_blank" href="' . $support_link . '">' . __( 'Support', $this->get_text_domain() ) . '</a>',
 		];
 		$links        = array_merge( $plugin_links, $links );
 
 		if ( $this->docs_url ) {
 			$plugin_links = [
-				'<a href="' . $this->docs_url . '">' . __( 'Docs', $this->get_text_domain() ) . '</a>',
+				'<a target="_blank" href="' . $this->docs_url . '">' . __( 'Docs', $this->get_text_domain() ) . '</a>',
 			];
 			$links        = array_merge( $plugin_links, $links );
 		}
 
 		if ( $this->settings_url ) {
 			$plugin_links = [
-				'<a href="' . $this->settings_url . '">' . __( 'Settings', $this->get_text_domain() ) . '</a>',
+				'<a target="_blank" href="' . $this->settings_url . '">' . __( 'Settings', $this->get_text_domain() ) . '</a>',
 			];
 			$links        = array_merge( $plugin_links, $links );
 		}

@@ -7,6 +7,7 @@
 - Conditional - interface to tag classes that should be instantiated/hooked only in given state
 ### Changed
 - WordpressFilterStorage - store plugin using WordPress filter system
+- target blank in default plugin links
 ### Fixed
 - Fixed assets and plugin url issues
 
