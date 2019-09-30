@@ -17,7 +17,7 @@ class WordpressFilterStorage implements PluginStorage {
 	 * @param AbstractPlugin $object
 	 */
 	public function add_to_storage( $class, $object ) {
-		add_filter( self::STORAGE_FILTER_NAME, function ( $plugins ) use ( $class, $object ) {
+		add_filter( self::STORAGE_FILTER_NAME, static function ( $plugins ) use ( $class, $object ) {
 			if ( isset( $plugins[ $class ] ) ) {
 				throw new Exception\ClassAlreadyExists( "Class {$class} already exists" );
 			}

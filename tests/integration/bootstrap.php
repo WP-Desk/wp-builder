@@ -18,7 +18,6 @@ if ( getenv( 'PLUGIN_PATH' ) !== false ) {
 require_once( getenv( 'WP_DEVELOP_DIR' ) . '/tests/phpunit/includes/functions.php' );
 
 tests_add_filter( 'muplugins_loaded', function () {
-	$plugins_to_active[] = 'hello.php';
 	update_option( 'active_plugins', $plugins_to_active );
 }, 100 );
 
