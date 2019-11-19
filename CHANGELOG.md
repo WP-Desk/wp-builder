@@ -1,3 +1,7 @@
+## [1.4.1] - 2019-11-19
+### Fixed
+- Invalid return type in Hookable interface
+
 ## [1.4.0] - 2019-09-26
 ### Added
 - SlimPlugin - abstract class with only most important plugin elements

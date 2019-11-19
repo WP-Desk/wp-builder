@@ -7,7 +7,7 @@ interface Hookable {
 	/**
 	 * Init hooks (actions and filters).
 	 *
-	 * @return null
+	 * @return void
 	 */
 	public function hooks();
 
