@@ -211,7 +211,7 @@ abstract class AbstractPlugin extends SlimPlugin {
 
 		if ( $this->settings_url ) {
 			$plugin_links = [
-				'<a target="_blank" href="' . $this->settings_url . '">' . __( 'Settings', $this->get_text_domain() ) . '</a>',
+				'<a href="' . $this->settings_url . '">' . __( 'Settings', $this->get_text_domain() ) . '</a>',
 			];
 			$links        = array_merge( $plugin_links, $links );
 		}
