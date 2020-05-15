@@ -1,3 +1,7 @@
+## [1.4.2] - 2020-05-15
+### Changed
+- Settings should open in default target
+
 ## [1.4.1] - 2019-11-19
 ### Fixed
 - Invalid return type in Hookable interface
