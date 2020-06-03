@@ -7,7 +7,7 @@ if ( ! class_exists( 'WPDesk_Buildable' ) ) {
 	require_once __DIR__ . '/Buildable.php';
 }
 if ( ! class_exists( 'WPDesk_Has_Plugin_Info' ) ) {
-	require_once 'Has_Plugin_Info.php';
+	require_once __DIR__ . '/Has_Plugin_Info.php';
 }
 
 /**
