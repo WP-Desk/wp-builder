@@ -1,3 +1,7 @@
+## [1.4.3] - 2020-06-03
+### Fixed
+- Path for require_once
+
 ## [1.4.2] - 2020-05-15
 ### Changed
 - Settings should open in default target
