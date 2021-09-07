@@ -16,6 +16,7 @@ if ( ! interface_exists( 'WPDesk_Has_Plugin_Info' ) ) {
  * have to be compatible with PHP 5.2.x
  */
 class WPDesk_Plugin_Info implements WPDesk_Translatable, WPDesk_Buildable, WPDesk_Has_Plugin_Info {
+
 	/** @var string */
 	private $plugin_file_name;
 
@@ -42,6 +43,11 @@ class WPDesk_Plugin_Info implements WPDesk_Translatable, WPDesk_Buildable, WPDes
 
 	/** string */
 	private $text_domain;
+
+	/**
+	 * @var array
+	 */
+	private $plugin_shops;
 
 	/**
 	 * @return string
@@ -168,4 +174,26 @@ class WPDesk_Plugin_Info implements WPDesk_Translatable, WPDesk_Buildable, WPDes
 	public function set_text_domain( $value ) {
 		$this->text_domain = $value;
 	}
+
+	/**
+	 * @return array
+	 */
+	public function get_plugin_shops() {
+		return $this->plugin_shops;
+	}
+
+	/**
+	 * @param array $plugin_shops
+	 */
+	public function set_plugin_shops( $plugin_shops ) {
+		$this->plugin_shops = $plugin_shops;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function get_plugin_slug() {
+		return basename( $this->get_plugin_dir() );
+	}
+
 }

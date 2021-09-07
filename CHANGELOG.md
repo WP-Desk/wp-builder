@@ -1,7 +1,10 @@
+## [2.0.0] - 2021-00-07
+### Added
+- plugin shops in WPDesk_Plugin_Info
+
 ## [1.4.4] - 2020-06-17
 ### Fixed
 - Replaced class_exists to interface_exists for interfaces
-
 
 ## [1.4.3] - 2020-06-03
 ### Fixed
