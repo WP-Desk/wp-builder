@@ -5,10 +5,9 @@
 [![Latest Unstable Version](https://poser.pugx.org/wpdesk/wp-builder/v/unstable)](https://packagist.org/packages/wpdesk/wp-builder)
 [![License](https://poser.pugx.org/wpdesk/wp-builder/license)](https://packagist.org/packages/wpdesk/wp-builder)
 
-WP Builder
-==========
+# WP Builder
 
-wp-builder defines interfaces and abstracts to create WordPress plugins. 
+wp-builder library defines the interfaces and abstracts to create WordPress plugins. 
 
 ## Requirements
 
@@ -24,7 +23,7 @@ composer require wpdesk/wp-builder
 
 ## Example usage
 
-Use this code in main WordPress plugin file:
+Use the following code in WordPress plugin's main .php file:
 
 ```php
 <?php
