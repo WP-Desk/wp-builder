@@ -1,3 +1,17 @@
+/.gitlab/
+/tmp_artifacts/
 /vendor/
+/vendor_prefixed/
+/.webpack/node_modules/
+/.webpack/v8-compile-cache-0/
 .idea
+build-coverage
+.DS_Store
+.commit
+lang/wpdesk-wp-builder-pl_PL.po
+wpdesk-wp-builder-pl_PL.po
+lang/wpdesk-wp-builder-pl_PL.mo
+wpdesk-wp-builder-pl_PL.mo
+assets/css/admin.css.map
 composer.lock
+.phpcs-cache
