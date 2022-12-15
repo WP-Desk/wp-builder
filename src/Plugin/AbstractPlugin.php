@@ -156,7 +156,7 @@ abstract class AbstractPlugin extends SlimPlugin {
 		add_action( 'admin_enqueue_scripts', [ $this, 'admin_enqueue_scripts' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ] );
 		add_action( 'plugins_loaded', [ $this, 'load_plugin_text_domain' ] );
-		add_filter( 'plugin_action_links_' . plugin_basename( $this->get_plugin_file_path() ), [ $this,	'links_filter' ] );
+		add_filter( 'plugin_action_links_' . plugin_basename( $this->get_plugin_file_path() ), [ $this, 'links_filter' ] );
 	}
 
 	/**
@@ -171,9 +171,11 @@ abstract class AbstractPlugin extends SlimPlugin {
 	/**
 	 * Append JS scripts in the WordPress admin panel. This is a hook function. Do not execute directly.
 	 *
+	 * @param string $hook_suffix The current admin page passed from WordPress filter.
+	 *
 	 * @return void
 	 */
-	public function admin_enqueue_scripts( $hook = '' ) {
+	public function admin_enqueue_scripts( $hook_suffix = '' ) {
 	}
 
 	/**
@@ -186,16 +188,18 @@ abstract class AbstractPlugin extends SlimPlugin {
 
 	/**
 	 * @param string $prefix
-	 * @param bool   $random
 	 *
-	 * @return int|string
+	 * @return string
 	 */
-	public function get_scripts_version( $prefix = '', $random = false ) {
-		if ( $random ) {
-			return time();
-		}
-
+	public function get_scripts_version( $prefix = '' ) {
 		return $prefix . $this->plugin_info->get_version();
+	}
+
+	/**
+	 * @return int
+	 */
+	public function get_random_script_version() {
+		return time();
 	}
 
 	/**
