@@ -4,10 +4,7 @@ namespace WPDesk\PluginBuilder\Plugin;
 
 /**
  * Base plugin with most basic functionalities used by every WPDesk plugin.
- *
- *
  * Known issues:
- *
  * The class name is too generic but can't be changed as it would introduce a major incompatibility for most of the plugins.
  * The $plugin_url, $docs_url and most other fields should be removed as they only litter the place but for compatibility reasons we can't do it right now.
  * Hook methods should be moved to external classes but for compatibility reasons we can't do it right now.
@@ -73,14 +70,12 @@ abstract class AbstractPlugin extends SlimPlugin {
 	 *
 	 * @return void
 	 * @deprecated Just use __construct to initialize plugin internal state.
-	 *
 	 */
 	public function init_base_variables() {
 	}
 
 	/**
 	 * Initializes plugin external state.
-	 *
 	 * The plugin internal state is initialized in the constructor and the plugin should be internally consistent after creation.
 	 * The external state includes hooks execution, communication with other plugins, integration with WC etc.
 	 *
@@ -127,6 +122,15 @@ abstract class AbstractPlugin extends SlimPlugin {
 	}
 
 	/**
+	 * Returns plugin path.
+	 *
+	 * @return string
+	 */
+	public function get_plugin_path() {
+		return trailingslashit( $this->plugin_info->get_plugin_dir() );
+	}
+
+	/**
 	 * Returns plugin absolute URL to dir with front end assets.
 	 *
 	 * @return string
@@ -138,7 +142,6 @@ abstract class AbstractPlugin extends SlimPlugin {
 	/**
 	 * @return $this
 	 * @deprecated For backward compatibility.
-	 *
 	 */
 	public function get_plugin() {
 		return $this;
@@ -153,11 +156,9 @@ abstract class AbstractPlugin extends SlimPlugin {
 		add_action( 'admin_enqueue_scripts', [ $this, 'admin_enqueue_scripts' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ] );
 		add_action( 'plugins_loaded', [ $this, 'load_plugin_text_domain' ] );
-		add_filter( 'plugin_action_links_' . plugin_basename( $this->get_plugin_file_path() ), [
-			$this,
-			'links_filter'
-		] );
+		add_filter( 'plugin_action_links_' . plugin_basename( $this->get_plugin_file_path() ), [ $this, 'links_filter' ] );
 	}
+
 	/**
 	 * Initialize plugin test domain. This is a hook function. Do not execute directly.
 	 *
@@ -170,9 +171,11 @@ abstract class AbstractPlugin extends SlimPlugin {
 	/**
 	 * Append JS scripts in the WordPress admin panel. This is a hook function. Do not execute directly.
 	 *
+	 * @param string $hook_suffix The current admin page passed from WordPress filter.
+	 *
 	 * @return void
 	 */
-	public function admin_enqueue_scripts() {
+	public function admin_enqueue_scripts( $hook_suffix = '' ) {
 	}
 
 	/**
@@ -181,6 +184,22 @@ abstract class AbstractPlugin extends SlimPlugin {
 	 * @return void
 	 */
 	public function wp_enqueue_scripts() {
+	}
+
+	/**
+	 * @param string $prefix
+	 *
+	 * @return string
+	 */
+	public function get_scripts_version( $prefix = '' ) {
+		return $prefix . $this->plugin_info->get_version();
+	}
+
+	/**
+	 * @return int
+	 */
+	public function get_random_script_version() {
+		return time();
 	}
 
 	/**
@@ -198,20 +217,20 @@ abstract class AbstractPlugin extends SlimPlugin {
 		}
 
 		$plugin_links = [
-			'<a target="_blank" href="' . $support_link . '">' . __( 'Support', $this->get_text_domain() ) . '</a>',
+			'<a target="_blank" href="' . $support_link . '">' . esc_html__( 'Support', $this->get_text_domain() ) . '</a>',
 		];
 		$links        = array_merge( $plugin_links, $links );
 
 		if ( $this->docs_url ) {
 			$plugin_links = [
-				'<a target="_blank" href="' . $this->docs_url . '">' . __( 'Docs', $this->get_text_domain() ) . '</a>',
+				'<a target="_blank" href="' . $this->docs_url . '">' . esc_html__( 'Docs', $this->get_text_domain() ) . '</a>',
 			];
 			$links        = array_merge( $plugin_links, $links );
 		}
 
 		if ( $this->settings_url ) {
 			$plugin_links = [
-				'<a href="' . $this->settings_url . '">' . __( 'Settings', $this->get_text_domain() ) . '</a>',
+				'<a href="' . $this->settings_url . '">' . esc_html__( 'Settings', $this->get_text_domain() ) . '</a>',
 			];
 			$links        = array_merge( $plugin_links, $links );
 		}

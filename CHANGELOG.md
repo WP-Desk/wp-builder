@@ -1,4 +1,10 @@
-## [2.0.0] - 2021-00-07
+## [2.1.0] - 2022-12-15
+### Added
+- plugin path
+- plugin lang
+- scripts version
+
+## [2.0.0] - 2021-01-07
 ### Added
 - plugin shops in WPDesk_Plugin_Info
 
