@@ -166,8 +166,8 @@ abstract class AbstractPlugin extends SlimPlugin {
 	public function load_plugin_text_domain() {
 		load_plugin_textdomain( $this->get_text_domain(), false, $this->get_namespace() . '/lang/' );
 	}
-
 	/**
+
 	 * Append JS scripts in the WordPress admin panel. This is a hook function. Do not execute directly.
 	 *
 	 * @return void
@@ -198,20 +198,20 @@ abstract class AbstractPlugin extends SlimPlugin {
 		}
 
 		$plugin_links = [
-			'<a target="_blank" href="' . $support_link . '">' . __( 'Support', $this->get_text_domain() ) . '</a>',
+			'<a target="_blank" href="' . $support_link . '">' . esc_html__( 'Support', 'wpdesk-wp-builder' ) . '</a>',
 		];
 		$links        = array_merge( $plugin_links, $links );
 
 		if ( $this->docs_url ) {
 			$plugin_links = [
-				'<a target="_blank" href="' . $this->docs_url . '">' . __( 'Docs', $this->get_text_domain() ) . '</a>',
+				'<a target="_blank" href="' . $this->docs_url . '">' . esc_html__( 'Docs', 'wpdesk-wp-builder' ) . '</a>',
 			];
 			$links        = array_merge( $plugin_links, $links );
 		}
 
 		if ( $this->settings_url ) {
 			$plugin_links = [
-				'<a href="' . $this->settings_url . '">' . __( 'Settings', $this->get_text_domain() ) . '</a>',
+				'<a href="' . $this->settings_url . '">' . esc_html__( 'Settings', 'wpdesk-wp-builder' ) . '</a>',
 			];
 			$links        = array_merge( $plugin_links, $links );
 		}

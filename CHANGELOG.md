@@ -1,4 +1,8 @@
-## [2.0.0] - 2021-00-07
+## [Unreleased]
+### Added
+- added the possibility to translate common phrases
+
+## [2.0.0] - 2021-01-07
 ### Added
 - plugin shops in WPDesk_Plugin_Info
 
