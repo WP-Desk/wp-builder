@@ -1,4 +1,4 @@
-## [Unreleased]
+## [2.1.0] - 2023-12-11
 ### Added
 - added the possibility to translate common phrases
 
