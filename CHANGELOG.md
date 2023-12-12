@@ -1,3 +1,7 @@
+## [2.1.1] - 2023-12-12
+### Fixed
+- fixed deprecated load_plugin_textdomain function required by the WordPress repository checker. False is no longer a valid option at position 2  
+
 ## [2.1.0] - 2023-12-11
 ### Added
 - added the possibility to translate common phrases
