@@ -164,7 +164,7 @@ abstract class AbstractPlugin extends SlimPlugin {
 	 * @return void
 	 */
 	public function load_plugin_text_domain() {
-		load_plugin_textdomain( $this->get_text_domain(), false, $this->get_namespace() . '/lang/' );
+		load_plugin_textdomain( $this->get_text_domain(), '', $this->get_namespace() . '/lang/' );
 	}
 	/**
 

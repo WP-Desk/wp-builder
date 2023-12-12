@@ -1,3 +1,7 @@
+## [2.1.1] - 2023-12-12
+### Fixed
+- fixed deprecated functions
+
 ## [2.1.0] - 2023-12-11
 ### Added
 - added the possibility to translate common phrases
