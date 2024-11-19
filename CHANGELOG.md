@@ -1,4 +1,4 @@
-## [Unreleased]
+## [2.1.2] - 2024-11-19
 ### Removed
 - Do not load translations from plugin hook. Leave it to other libraries and processes.
 
