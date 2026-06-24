@@ -1,11 +1,16 @@
 {
 	"name": "wpdesk/wp-builder",
-	"authors": [
-		{
-			"name": "Krzysiek",
-			"email": "krzysiek@wpdesk.pl"
-		}
-	],
+	"license": "MIT",
+  "authors": [
+    {
+      "name": "WP Desk",
+      "homepage": "https://wpdesk.net"
+    },
+    {
+      "name": "Octolize",
+      "homepage": "https://octolize.com"
+    }
+  ],
 	"require": {
 		"php": ">=7.4 || ^8"
 	},
